@@ -1,0 +1,46 @@
+produk = {
+    "nama": "Laptop asus",
+    "harga": 7500000,
+    "stok": 10
+}
+
+print("produk = ", produk)
+
+print("1. Tampilkan Data Produk")
+print("2. Tambah Kategori") 
+print("3. Ubah Harga Produk") 
+print("4. Hapus Kategori")
+print("5. Tampilkan Data Setelah Perubahan")
+print("6. Keluar")
+
+pilihan = input("Pilih menu (1-6): ")
+
+if pilihan == "1":
+    print("\n--- DATA PRODUK ---")
+    print("Nama  :", produk["nama"])
+    print("Harga :", produk["harga"])
+    print("Stok  :", produk["stok"])
+
+    if "kategori" in produk:
+        print("Kategori :", produk["kategori"])
+
+elif pilihan == "2":
+    kategori = input("nama kategori: ")
+
+    if kategori.strip() == "":
+        print("\nKategori tidak boleh kosong!")
+    else:
+        produk["kategori"] = kategori
+
+        print("\nKategori berhasil ditambahkan!")
+        print("Kategori :", produk["kategori"])
+
+        del produk["stok"]
+        print("Stok berhasil dihapus!")
+
+        elif pilihan == "6":
+    print("\nProgram selesai.")
+    print("Terima kasih telah menggunakan program.")
+
+    else:
+    print("\nPilihan menu tidak tersedia. Silakan pilih 1-6.")
